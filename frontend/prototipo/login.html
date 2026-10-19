@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login - Ecommerce</title>
+    <link rel="icon" href="./assets/logo.jpg" />
+    <link rel="stylesheet" href="ecommerce.css" />
+  </head>
+  <body class="login">
+    <header class="header-login">
+      <h1>Seja bem vindo ao nosso Site!</h1>
+    </header>
+
+    <main class="main-login">
+      <h3>Faça login para entrar!</h3>
+
+      <label for="email">Email: </label><br />
+      <input
+        type="email"
+        name="Login"
+        id="Login"
+        placeholder="Digite o e-mail"
+      />
+      <br />
+
+      <label for="Senha">Senha: </label><br />
+      <input
+        type="password"
+        name="Senha"
+        id="Senha"
+        placeholder="Digite a senha"
+      />
+      <br />
+
+      <form action="ecommerce.html" method="GET">
+        <input type="submit" id="Entrar" value="Entrar" onclick="Entrar()" />
+      </form>
+    </main>
+    <footer class="footer-login">
+      <h4><img src="./assets/logo.jpg" alt="logo.png" />Ecommerce - 2026</h4>
+      <h4>Colocar imagem ou descrição do site</h4>
+    </footer>
+  </body>
+</html>
