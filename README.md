@@ -30,6 +30,9 @@ Terminamos a criação do nosso banco de dados chamado ecommerce, nessa fase, cr
 - Versão 0.0.3
 Adição das pastas docs e frontend ao repositório, a pasta docs contém a ficha de prototipagem do nosso projeto com as telas, o funcionamento esperado e o protótipo inicial das telas. A pasta frontend contém os protótipos das telas do nosso projeto, sendo elas uma versão inicial daquilo que queremos construir.
 
+- Versão 0.0.4
+Adição do arquivo consultas.sql onde adicionamos as principais consultas que utilizamos na construção do banco e verificação dos dados.
+
 ## BANCO DE DADOS
 
 Para utilizar o banco de dados, primeiro verifique a pasta banco, a seguir verifique se os dois arquivos estão contidos nela, sendo estrutura.sql e dados_teste.sql, confirmando essa tarefa, siga para a criação do banco, execute os seguintes passos:
@@ -41,10 +44,11 @@ Para utilizar o banco de dados, primeiro verifique a pasta banco, a seguir verif
 6. Após a criação do banco e da inserção dos valores, confira se tudo está de acordo com as SELECTs no fim do arquivo, as mesmas irão verificar se tudo foi executado de maneira correta.
 7. Não execute o arquivo dados_teste.sql mais de uma vez, pois há atributos que foram registrados com unicidade, ou seja, não podem se repetir.
 8. Não execute o estrutura.sql após a criação do banco ecommerce, pois isso gerará um erro, porque o banco já foi criado.
+9. O arquivo consultas.sql não faz parte da criação do banco, adicionamos apenas as principais consultas que utilizamos para auxiliar na auditoria dos dados, o execute apenas após a criação do banco, das tabelas e da inserção dos dados.
 
 ## ORGANIZAÇÃO DO REPOSITÓRIO
 
-- Pasta banco: Contém todos os arquivos do nosso banco de dados;
+- Pasta banco: Contém todos os arquivos do nosso banco de dados e as principais consultas;
 - Pasta docs: Contém a ficha de prototipagem do projeto;
 - Pasta frontend/prototipo: Contém todos os protótipos de telas do projeto.
 
