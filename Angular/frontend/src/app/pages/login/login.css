@@ -1,0 +1,83 @@
+/* CSS da página de Login */
+.login {
+    * {
+    --header: #c25433;
+    --main: #faddd3c7;
+    --footer: #7e655e;
+    --creme: #f7d977;
+    --contrast: #be9b737c;
+    --entrar: #22ee55c0;
+    }
+.header-login {
+    background-color: var(--header);
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 40px;
+    border-bottom: solid 3px var(--creme);
+}
+.main-login {
+    background-color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h3 {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        padding: 40px;
+    }
+    label{
+        margin: 0px 150px;
+    }
+        #Login {
+        margin: 0px 150px;
+        border-radius: 20px;
+        border: solid 2px var(--creme);
+        padding: 5px;
+        padding-left: 2%;
+        }
+        #Senha {
+        margin: 0px 150px;
+        border-radius: 20px;
+        border: solid 2px var(--creme);
+        padding: 5px;
+        padding-left: 2%;
+        }
+    }
+    #Entrar {
+        padding: 7px 20px;
+        margin: 30px;
+        background-color: var(--entrar);
+        border: solid 2px var(--creme);
+        border-radius: 10px;
+        font-weight: bold;
+    }
+    #Entrar:hover {
+        cursor: pointer;
+    }
+
+.footer-login {
+    background-color: var(--footer);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    border-top: solid 3px var(--creme);
+    
+    img{
+        height: 30px;
+        margin-right: 10px;
+    }
+    h4{
+        display: flex;
+        align-items: center;
+        color: white;
+        padding: 5px;
+    }
+}
+}

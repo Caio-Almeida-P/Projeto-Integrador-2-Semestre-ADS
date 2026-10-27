@@ -1,0 +1,138 @@
+/* CSS da página do Ecommerce */
+.ecommerce {
+    * {
+    --header: #c25433;
+    --main: #faddd3c7;
+    --footer: #7e655e;
+    --creme: #f7d977;
+    --contrast: #be9b737c;
+    --entrar: #22ee55c0;
+    }
+.header-ecommerce {
+    background-color: var(--header);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    border-bottom: solid 3px var(--creme);
+    
+    form {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        padding: 40px;
+        width: 100%;
+        input {
+            padding: 10px 0;
+            border: solid 3px var(--creme);
+            border-radius: 20px;
+            margin: 2px 5px;
+        }
+        #Pesquisa {
+            width: 100%;
+            padding-left: 1%;
+            padding-right: 10px;
+        }
+        button {
+            border: solid 3px var(--creme);
+            border-radius: 20px;
+            background-color: var(--entrar);
+            color: white;
+            font-weight: bold;
+            padding: 0px 15px;
+        }
+        button:hover{
+            cursor: pointer;
+        }
+    }
+
+    nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    gap: 15px;
+
+    font-size: 0.9rem;
+
+    a {
+        text-decoration: none;
+        color: var(--creme);
+    }
+    }
+}
+
+.main-ecommerce {
+    background-color: var(--main);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    h2 {
+        padding: 30px;
+    }
+}
+.cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 2px;
+    width: 100%;
+    a {
+        text-decoration: none;
+    }
+    article {
+        text-align: center;
+        background-color: white;
+        border: 2px gray solid;
+        border-radius: 8px;
+        padding: 2%;
+
+        h4{
+            color: black;
+            font-weight: bold;
+        }
+        p {
+            color:gray;
+            font-weight: bold;
+        }
+        #PRECO {
+            color: var(--header);
+        }
+    }
+}
+.footer-ecommerce {
+    background-color: var(--footer);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    border-top: solid 3px var(--creme);
+    
+    img{
+        height: 30px;
+        margin-right: 10px;
+    }
+    h4{
+        display: flex;
+        align-items: center;
+        color: white;
+        padding: 5px;
+    }
+    .Rodape-Carrinho {
+        position: fixed;
+        bottom: 3%;
+        right: 3%;
+        padding: 15px;
+        border: var(--creme) solid 4px;
+        background-color: var(--header);
+        border-radius: 50px;
+
+    }
+}
+}

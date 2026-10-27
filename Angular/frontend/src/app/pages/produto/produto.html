@@ -1,0 +1,71 @@
+<div class="produto">
+  <!-- Todo o conteúdo do header, main e footer fica aqui dentro -->
+
+    <header class="header-produto">
+        <h1>Ecommerce - 2026</h1>
+        <h2>🛒</h2>
+        <br>
+        <br>
+        <h2>O lugar onde você de fato compra barato 💸</h2>
+
+        <form action="#" method="get">
+            <input type="search"
+                   name="Pesquisa"
+                   id="Pesquisa"
+                   placeholder="🔍︎ Pesquisa">
+            <button type="submit">Pesquisar</button>
+        </form>
+
+        <nav>
+            <a routerLink="/ecommerce"><h3>☰ Menu</h3></a>
+            <a routerLink="/ecommerce"><h3>🏷️Ofertas</h3></a>
+            <a routerLink="/ecommerce"><h3>🧾Histórico</h3></a>
+            <a routerLink="/ecommerce"><h3>🎁Meus Pedidos</h3></a>
+            <a routerLink="/ecommerce"><h3>ℹ️Sobre Nós</h3></a>
+        </nav>
+        
+    </header>
+    <main class="main-produto">
+
+        <section class="card">
+        <article id="Info-produto">
+        <h2>Produto</h2>
+        <ul>
+            <li>Descrição do Produto</li>
+            <li>Especificações</li>
+        </ul>
+        <img src="./assets/ecommerce.apresentacao.jpg" alt="imagem">
+
+        </article>
+
+        <article id="Sobre-produto">
+            
+        <h2>Item selecionado:</h2>
+        <ul>
+            <li>Produto x1 (R$ 0,00)</li>
+            <li>Frete Expresso: <strong>GRÁTIS</strong></li>
+        </ul>
+        <h2 id="Titulo-Total">Valor Total: R$ 0,00</h2>
+
+        </article>
+
+        </section>
+
+        <article class="Compra-Carrinho">
+            <form action="">
+                <input type="submit" id="Carrinho" value="Adicionar ao Carrinho 🛒" routerLink="/pagamento" />
+            </form>
+            <form action="pagamento.html">
+                <input type="submit" id="Finalizar-Compra" value="Finalizar Compra 💳" routerLink="/pagamento" />
+            </form>
+        </article>
+
+    </main>
+    <footer class="footer-produto">
+        <h4><img src="./assets/logo.jpg" alt="logo.png" />Ecommerce - 2026</h4>
+        <h4>Colocar imagem ou descrição do site</h4>
+        <section class="Rodape-Carrinho">
+            <h2>🛒</h2>
+        </section>
+    </footer>
+</div>

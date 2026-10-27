@@ -1,0 +1,89 @@
+/* CSS da página de Início: */
+.inicio {
+    * {
+    --header: #c25433;
+    --main: #faddd3c7;
+    --footer: #7e655e;
+    --creme: #f7d977;
+    --contrast: #be9b737c;
+    --entrar: #22ee55c0;
+    --sobre: #f5cc15ab;
+    }
+
+.header-inicio {
+    background-color: var(--header);
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 40px;
+    border-bottom: solid 3px var(--creme);
+}
+.main-inicio {
+    background-color: var(--main);
+    display: flex;
+    flex-direction: row;
+    
+    img {
+        width: 50%;
+    }
+}
+.Entrar {
+    background-color: var(--main);
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+
+    h3{
+        width: 100%;
+        text-align: center;
+        padding-top: 10%;
+        padding-bottom: 10%;
+    }
+    div {
+        background-color: var(--main);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        height: 60%;
+        gap: 50px;
+    }
+    a {
+        text-decoration: none;
+        font-weight: bold;
+        font-size: large;
+        color: black;
+        border: 2px solid white;
+        padding: 10px 20px;
+        border-radius: 5px;
+    }
+    #Site {
+        background-color: var(--entrar);
+    }
+    #Sobre {
+        background-color: var(--sobre);
+    }
+
+}
+.footer-inicio {
+    background-color: var(--footer);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    border-top: solid 3px var(--creme);
+    
+    img{
+        height: 30px;
+        margin-right: 10px;
+    }
+    h4{
+        display: flex;
+        align-items: center;
+        color: white;
+        padding: 5px;
+    }
+}
+}
