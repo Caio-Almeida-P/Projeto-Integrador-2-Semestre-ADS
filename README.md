@@ -34,13 +34,13 @@ Adição das pastas docs e frontend ao repositório, a pasta docs contém a fich
 Adição do arquivo consultas.sql onde adicionamos as principais consultas que utilizamos na construção do banco e verificação dos dados.
 
 - Versão 0.0.5
-- Criação do projeto Angular.
-- Migração das páginas HTML e CSS para componentes Angular.
-- Organização das páginas em componentes independentes.
-- Configuração das rotas com app.routes.ts.
-- Configuração da navegação entre as páginas.
-- Organização das imagens na pasta public/assets/.
-- Configuração dos arquivos necessários para executar o projeto.
+  Criação do projeto Angular.
+  Migração das páginas HTML e CSS para componentes Angular.
+  Organização das páginas em componentes independentes.
+  Configuração das rotas com app.routes.ts.
+  Configuração da navegação entre as páginas.
+  Organização das imagens na pasta public/assets/.
+  Configuração dos arquivos necessários para executar o projeto.
 
 ## BANCO DE DADOS
 
