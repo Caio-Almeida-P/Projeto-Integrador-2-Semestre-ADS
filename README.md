@@ -34,13 +34,47 @@ Adição das pastas docs e frontend ao repositório, a pasta docs contém a fich
 Adição do arquivo consultas.sql onde adicionamos as principais consultas que utilizamos na construção do banco e verificação dos dados.
 
 - Versão 0.0.5
-  Criação do projeto Angular.
-  Migração das páginas HTML e CSS para componentes Angular.
-  Organização das páginas em componentes independentes.
-  Configuração das rotas com app.routes.ts.
-  Configuração da navegação entre as páginas.
-  Organização das imagens na pasta public/assets/.
-  Configuração dos arquivos necessários para executar o projeto.
+Criação do projeto Angular.
+Migração das páginas HTML e CSS para componentes Angular.
+Organização das páginas em componentes independentes.
+Configuração das rotas com app.routes.ts.
+Configuração da navegação entre as páginas.
+Organização das imagens na pasta public/assets/.
+Configuração dos arquivos necessários para executar o projeto.
+
+- Versão 0.0.6
+Backend — Ecommerce
+Backend desenvolvido com Node.js, Express e MySQL.
+
+### Tecnologias utilizadas:
+
+Node.js: execução do JavaScript no servidor.
+Express: criação do servidor e das rotas da API.
+MySQL: banco de dados.
+mysql2: conexão entre Node.js e MySQL.
+CORS: permite comunicação entre frontend e backend.
+dotenv: gerenciamento das configurações locais.
+
+### Funcionalidades implementadas:
+- Conexão com o banco ecommerce.
+- Servidor Express na porta 3000.
+- Rota GET /produtos, que retorna os produtos em JSON.
+- Configuração de CORS e variáveis de ambiente.
+  
+### Como executar:
+
+cd backend
+npm install
+npm run dev
+
+### Testes:
+
+- http://localhost:3000
+- http://localhost:3000/produtos
+  
+Observação: cada integrante deve configurar seu próprio arquivo .env. Ele e a pasta node_modules não devem ser enviados ao GitHub.
+
+
 
 ## BANCO DE DADOS
 
