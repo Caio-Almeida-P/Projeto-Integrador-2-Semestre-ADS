@@ -75,6 +75,16 @@ npm run dev
 Observação: cada integrante deve configurar seu próprio arquivo .env. Ele e a pasta node_modules não devem ser enviados ao GitHub.
 
 
+- Versão 0.0.7
+O que conseguimos fazer: 
+  Integramos o Angular com o backend Node.js.
+  Conectamos a API ao MySQL.
+  Fizemos o catálogo carregar os produtos do banco.
+  Implementamos a exibição dos detalhes e das imagens.
+  Enviamos as alterações sem apagar as atualizações dos colegas.
+  Mantivemos .env e node_modules fora do GitHub.
+
+
 
 ## BANCO DE DADOS
 
