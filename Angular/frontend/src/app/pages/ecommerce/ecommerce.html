@@ -29,44 +29,26 @@
 
         <section class="cards">
 
-        <article>
-            <a routerLink="/produto">
-                <h4>Card 1</h4>
-                <p>Descrição produto</p>
-                <img src="" alt="imagem">
-                <h3 id="PRECO">R$ preço</h3>
-            </a>
-        </article>
-        <article>
-            <a routerLink="/produto">
+            <!-- <a routerLink="/produto">
                 <h4>Card 2</h4>
                 <p>Descrição produto</p>
                 <img src="" alt="imagem">
                 <h3 id="PRECO">R$ preço</h3>
-            </a>
-        </article>
-        <article>
-            <a routerLink="/produto">
-                <h4>Card 3</h4>
-                <p>Descrição produto</p>
-                <img src="" alt="imagem">
-                <h3 id="PRECO">R$ preço</h3>
-            </a>
-        </article>
-        <article>
-            <a routerLink="/produto">
-                <h4>Card 4</h4>
-                <p>Descrição produto</p>
-                <img src="" alt="imagem">
-                <h3 id="PRECO">R$ preço</h3>
-            </a>
-        </article>
-        <article>
-            <a routerLink="/produto">
-                <h4>Card 5</h4>
-                <p>Descrição produto</p>
-                <img src="" alt="imagem">
-                <h3 id="PRECO">R$ preço</h3>
+            </a> -->
+        
+        <article *ngFor="let produto of produtos">
+            <a [routerLink]="['/produto', produto.id]">
+                
+                <img [src]="'/' + produto.imagem" [alt]="produto.nome">
+
+                <h4>{{ produto.nome }}</h4>
+                <p>{{ produto.descricao }}</p>
+                
+                <h3 id="PRECO">{{produto.preco | currency:'BRL' }}</h3>
+
+                <p>Marca: {{ produto.marca }}</p>
+
+                <p>Estoque: {{ produto.estoque }}</p>
             </a>
         </article>
             

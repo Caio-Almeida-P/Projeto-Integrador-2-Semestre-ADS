@@ -79,8 +79,8 @@
 .cards {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
-    gap: 2px;
+    justify-content: center;
+    gap: 10px;
     width: 100%;
     a {
         text-decoration: none;
@@ -99,6 +99,9 @@
         p {
             color:gray;
             font-weight: bold;
+        }
+        img {
+            width: 100%;
         }
         #PRECO {
             color: var(--header);

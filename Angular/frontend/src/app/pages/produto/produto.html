@@ -30,22 +30,32 @@
         <section class="card">
         <article id="Info-produto">
         <h2>Produto</h2>
-        <ul>
-            <li>Descrição do Produto</li>
-            <li>Especificações</li>
+        <ul *ngIf="produto">
+            <li>{{ produto.descricao }}</li>
+            <li>{{ produto.marca }}</li>
+            <li>Estoque: {{ produto.estoque }} unidades</li>
         </ul>
-        <img src="./assets/ecommerce.apresentacao.jpg" alt="imagem">
+
+        <h3 *ngIf="produto">{{ produto.nome }}</h3>
+
+        <p *ngIf="!produto">Carregando produto...</p>
+
+        <img *ngIf="produto"
+            [src]="'/' + produto.imagem"
+            [alt]="produto.nome">
 
         </article>
 
         <article id="Sobre-produto">
             
         <h2>Item selecionado:</h2>
-        <ul>
-            <li>Produto x1 (R$ 0,00)</li>
+        <ul *ndIf="produto">
+            <li>{{ produto.nome }}</li>
+            <li>{{ produto.preco | currency: 'BRL' }}</li>
             <li>Frete Expresso: <strong>GRÁTIS</strong></li>
         </ul>
-        <h2 id="Titulo-Total">Valor Total: R$ 0,00</h2>
+        <h2 id="Titulo-Total" *ngIf="produto">
+            Valor Total: {{ produto.preco | currency: 'BRL' }}</h2>
 
         </article>
 
@@ -53,10 +63,18 @@
 
         <article class="Compra-Carrinho">
             <form action="">
-                <input type="submit" id="Carrinho" value="Adicionar ao Carrinho 🛒" routerLink="/pagamento" />
+                <input 
+                type="submit" 
+                id="Carrinho" 
+                value="Adicionar ao Carrinho 🛒" 
+                routerLink="/pagamento" />
             </form>
             <form action="pagamento.html">
-                <input type="submit" id="Finalizar-Compra" value="Finalizar Compra 💳" routerLink="/pagamento" />
+                <input 
+                type="submit" 
+                id="Finalizar-Compra" 
+                value="Finalizar Compra 💳" 
+                routerLink="/pagamento" />
             </form>
         </article>
 

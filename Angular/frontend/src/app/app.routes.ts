@@ -11,6 +11,6 @@ export const routes: Routes = [
     { path: 'inicio', component: Inicio},
     { path: 'login', component: Login},
     { path: 'ecommerce', component: Ecommerce},
-    { path: 'produto', component: Produto},
+    { path: 'produto/:id', component: Produto},
     { path: 'pagamento', component: Pagamento}
 ];
