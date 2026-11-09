@@ -11,10 +11,12 @@ app.use(express.json());
 // Importar as rotas
 const produtoRoutes = require('./routes/produtoRoutes');
 const usuarioRoutes = require('./routes/usuarioRoutes');
+const categoriaRoutes = require('./routes/categoriaRoutes');
 
 // Registrar as rotas
 app.use('/produtos', produtoRoutes);
 app.use('/usuarios', usuarioRoutes);
+app.use('/categorias', categoriaRoutes);
 
 // Rota principal
 app.get('/', (req, res) => {
