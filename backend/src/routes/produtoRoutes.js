@@ -26,10 +26,10 @@ router.get("/busca", (req, res) => {
     });
   }
 
-  const padrao = '%' + termo + '%';
+  const padrao = "%" + termo + "%";
 
   connection.query(
-    'SELECT * FROM produtos WHERE nome LIKE ? OR descricao LIKE ?',
+    "SELECT * FROM produtos WHERE nome LIKE ? OR descricao LIKE ?",
     [padrao, padrao],
     (err, results) => {
       if (err) {
@@ -40,7 +40,7 @@ router.get("/busca", (req, res) => {
       }
 
       res.json(results);
-    }
+    },
   );
 });
 
@@ -67,6 +67,33 @@ router.get("/:id", (req, res) => {
       res.json(results[0]);
     },
   );
+});
+
+// Rota para deletar um produto a partir do seu ID
+router.delete("/:id", (req, res) => {
+  const id = req.params.id;
+
+  connection.query("DELETE FROM produtos WHERE id = ?", [id], (err, result) => {
+    if (err) {
+      if(err.code === 'ER_ROW_IS_REFERENCED_2'){
+        return res.status(409).json({
+            erro: "Não é possível excluir produtos que tenham vendas cadastradas!"
+        })
+      }; 
+      
+        console.error(err);
+
+      return res.status(500).json({
+        erro: "Erro ao excluir o produto",
+      });
+    }
+    if (result.affectedRows === 0) {
+      return res.status(404).json({
+        erro: "Produto não encontrado!",
+      });
+    }
+    res.json({ mensagem: "Produto excluído com sucesso!" });
+  });
 });
 
 module.exports = router;
