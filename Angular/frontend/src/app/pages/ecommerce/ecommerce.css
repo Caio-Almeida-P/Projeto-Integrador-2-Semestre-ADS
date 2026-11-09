@@ -88,7 +88,7 @@
     article {
         text-align: center;
         background-color: white;
-        border: 2px gray solid;
+        border: 2px var(--footer) solid;
         border-radius: 8px;
         padding: 2%;
 
@@ -101,7 +101,7 @@
             font-weight: bold;
         }
         img {
-            width: 100%;
+            width: 100px;
         }
         #PRECO {
             color: var(--header);

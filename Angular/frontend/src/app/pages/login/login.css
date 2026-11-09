@@ -18,46 +18,52 @@
     border-bottom: solid 3px var(--creme);
 }
 .main-login {
+
     background-color: whitesmoke;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 
-    h3 {
+        h3 {
         display: flex;
         flex-direction: row;
         justify-content: center;
         padding: 40px;
-    }
-    label{
-        margin: 0px 150px;
-    }
-        #Login {
-        margin: 0px 150px;
+        }
+
+        form{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+    
+        #email {
         border-radius: 20px;
         border: solid 2px var(--creme);
-        padding: 5px;
-        padding-left: 2%;
+        padding: 5px 40%;
+        padding-left: 10%;
         }
-        #Senha {
-        margin: 0px 150px;
+
+        #senha {
         border-radius: 20px;
         border: solid 2px var(--creme);
-        padding: 5px;
-        padding-left: 2%;
+        padding: 5px 40%;
+        padding-left: 10%;
         }
-    }
-    #Entrar {
+
+        #Entrar {
         padding: 7px 20px;
         margin: 30px;
         background-color: var(--entrar);
         border: solid 2px var(--creme);
         border-radius: 10px;
         font-weight: bold;
-    }
-    #Entrar:hover {
+        }
+        #Entrar:hover {
         cursor: pointer;
+        }
     }
 
 .footer-login {
