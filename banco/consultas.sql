@@ -71,6 +71,6 @@ UPDATE produtos
 SET estoque = estoque - 1
 WHERE id = 1;
 
-COMMIT; -- No sistema real iremos utilizar o COMMIT e não rollback, para concretizar as alterações feitas.
+-- COMMIT; -- No sistema real iremos utilizar o COMMIT e não rollback, para concretizar as alterações feitas.
 
 ROLLBACK; -- Utilizamos o Rollback para não alterar os dados que já foram inseridos e deixar os dados diferentes

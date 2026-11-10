@@ -16,6 +16,44 @@ router.get("/", (req, res) => {
   });
 });
 
+// Rota para criar um novo produto
+router.post("/", (req, res) =>{
+    const { nome, descricao, preco, estoque, marca, id_categoria} = req.body;
+    
+    if(!nome || !descricao || preco === undefined || estoque === undefined || !marca || !id_categoria){
+        return res.status(400).json({
+            erro: 'Preencha todos os campos do produto!'
+        });
+    }
+
+    const sql = `INSERT INTO produtos (nome, descricao, preco, estoque, marca, id_categoria)
+        VALUES (?, ?, ?, ?, ?, ?)`;
+
+    connection.query(
+        sql,
+        [nome, descricao, preco, estoque, marca, id_categoria],
+        (err, result) => {
+            if(err){
+                if(err.code === 'ER_CHECK_CONSTRAINT_VIOLATED'){
+                    return res.status(400).json({
+                        erro: "Não é permitido produto com preço ou estoque negativo! "
+                    })
+                };
+
+                console.error(err);
+
+                return res.status(500).json({
+                    erro: "Erro ao cadastrar o produto!"
+                });
+            }
+            res.status(201).json({
+                mensagem: "Produto cadastrado com sucesso!",
+                id: result.insertId
+            });
+        }
+    )
+});
+
 // Buscar um produto com o termo digitado
 router.get("/busca", (req, res) => {
   const termo = req.query.termo;
