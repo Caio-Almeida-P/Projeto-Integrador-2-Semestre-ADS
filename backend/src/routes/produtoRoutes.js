@@ -36,7 +36,12 @@ router.post("/", (req, res) =>{
             if(err){
                 if(err.code === 'ER_CHECK_CONSTRAINT_VIOLATED'){
                     return res.status(400).json({
-                        erro: "Não é permitido produto com preço ou estoque negativo! "
+                        erro: "O preço do produto não pode ser menor ou igual a 0 e o estoque não pode ser menor que 0!"
+                    })
+                };
+                if(err.code === "ER_NO_REFERENCED_ROW_2"){
+                  return res.status(400).json({
+                        erro: "Categoria não encontrada!"
                     })
                 };
 
