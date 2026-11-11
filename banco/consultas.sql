@@ -74,3 +74,11 @@ WHERE id = 1;
 -- COMMIT; -- No sistema real iremos utilizar o COMMIT e não rollback, para concretizar as alterações feitas.
 
 ROLLBACK; -- Utilizamos o Rollback para não alterar os dados que já foram inseridos e deixar os dados diferentes
+
+SELECT * FROM usuarios;
+
+UPDATE usuarios
+SET nivel_acesso = 2
+WHERE id = 4;
+
+SELECT * FROM usuarios;
